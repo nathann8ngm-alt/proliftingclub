@@ -1,49 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ProLifting Club</title>
-<style>
-  body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; color: #222; }
-  h1 { color: #1a1a1a; }
-  h2 { color: #333; margin-top: 40px; }
-  p { line-height: 1.7; color: #444; }
-  a { color: #0066cc; }
-  .logo { font-size: 2em; font-weight: bold; margin-bottom: 10px; }
-  nav a { margin-right: 20px; text-decoration: none; color: #0066cc; }
-  hr { margin: 40px 0; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProLiftingClub</title>
+    <meta name="description" content="ProLiftingClub — Strength training, mobility, and powerlifting content. Sharing workout videos and tips to help athletes of all levels improve their performance.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+            background: #0a0a0a;
+            color: #f5f5f5;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            border-bottom: 2px solid #e63946;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+        .logo span { color: #e63946; }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        nav a {
+            color: #f5f5f5;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: #e63946; }
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+        .hero h1 span { color: #e63946; }
+        .hero p {
+            font-size: 1.25rem;
+            color: #aaa;
+            margin-bottom: 2rem;
+        }
+        .hero-tag {
+            display: inline-block;
+            background: #e63946;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        .feature-card {
+            background: #1a1a1a;
+            border-radius: 12px;
+            padding: 2rem;
+            border: 1px solid #333;
+            transition: border-color 0.3s;
+        }
+        .feature-card:hover { border-color: #e63946; }
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        .feature-card p { color: #aaa; }
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .content-section {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+        .content-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid #e63946;
+            padding-left: 1rem;
+        }
+        .about-text {
+            color: #ccc;
+            font-size: 1.1rem;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .social-links a {
+            color: #f5f5f5;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border: 1px solid #333;
+            border-radius: 8px;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+        .social-links a:hover {
+            background: #e63946;
+            border-color: #e63946;
+        }
+        footer {
+            background: #1a1a1a;
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid #333;
+            margin-top: 3rem;
+        }
+        footer p { color: #888; margin-bottom: 0.5rem; }
+        footer a { color: #e63946; text-decoration: none; }
+    </style>
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="logo">Pro<span>Lifting</span>Club</div>
+            <ul>
+                <li><a href="/proliftingclub/">Home</a></li>
+                <li><a href="/proliftingclub/about.html">About</a></li>
+                <li><a href="/proliftingclub/terms-of-service.html">Terms of Service</a></li>
+                <li><a href="/proliftingclub/privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="logo">💪 ProLifting Club</div>
-<nav>
-  <a href="#about">About</a>
-  <a href="#terms">Terms of Service</a>
-  <a href="#privacy">Privacy Policy</a>
-</nav>
-<hr>
+    <section class="hero">
+        <span class="hero-tag">Strength • Mobility • Powerlifting</span>
+        <h1>Pro<span>Lifting</span>Club</h1>
+        <p>A fitness content platform dedicated to sharing strength training, mobility, and powerlifting content. We post workout videos and tips to help athletes of all levels improve their performance.</p>
+    </section>
 
-<h1 id="about">About ProLifting Club</h1>
-<p>ProLifting Club is a fitness content platform dedicated to sharing strength training, mobility, and powerlifting content. We post workout videos and tips to help athletes of all levels improve their performance.</p>
+    <section class="features">
+        <div class="feature-card">
+            <div class="feature-icon">🏋️</div>
+            <h3>Strength Training</h3>
+            <p>Workout videos covering compound lifts, accessory work, and progressive overload techniques.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🤸</div>
+            <h3>Mobility & Warm-ups</h3>
+            <p>Shoulder mobility routines, warm-up drills, and recovery techniques to keep you lifting longer.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">💪</div>
+            <h3>Powerlifting</h3>
+            <p>Technique breakdowns, form tips, and training strategies for squat, bench, and deadlift.</p>
+        </div>
+    </section>
 
-<hr>
+    <section class="content-section">
+        <h2>About ProLiftingClub</h2>
+        <p class="about-text">
+            ProLiftingClub is a fitness content platform created by Gilberto Muniz, dedicated to sharing authentic strength training content from Lifting Club gym. Our mission is to document real training sessions — from heavy compound lifts to mobility work — and share them with athletes looking to improve their performance.
+            <br><br>
+            We publish content across Instagram, TikTok, and Facebook, covering exercise demonstrations, workout tips, and training insights. Every video is filmed during actual training sessions to keep things real.
+        </p>
+    </section>
 
-<h2 id="terms">Terms of Service</h2>
-<p><strong>Last updated: July 14, 2026</strong></p>
-<p>By accessing or using ProLifting Club content and services, you agree to these terms. Our content is for informational and educational purposes only. Always consult a qualified fitness professional before beginning any exercise program.</p>
-<p>We reserve the right to update these terms at any time. Continued use of our content constitutes acceptance of the updated terms.</p>
-<p>For questions, contact us at: <a href="mailto:contact@proliftingclub.com">contact@proliftingclub.com</a></p>
+    <section class="content-section">
+        <h2>Follow Us</h2>
+        <div class="social-links">
+            <a href="https://www.instagram.com/bertomunizpr/">Instagram</a>
+            <a href="https://www.tiktok.com/@berto.muniz">TikTok</a>
+            <a href="https://www.facebook.com/1204874392710066">Facebook</a>
+        </div>
+    </section>
 
-<hr>
-
-<h2 id="privacy">Privacy Policy</h2>
-<p><strong>Last updated: July 14, 2026</strong></p>
-<p>ProLifting Club does not collect, store, or share any personal data from viewers or followers. Our social media integrations operate solely on behalf of the account owner and do not process third-party user data.</p>
-<p>We use TikTok, Instagram, and Facebook APIs exclusively to publish fitness content on our own accounts. No user data is collected through these integrations.</p>
-<p>This application (ProLiftingClub) uses TikTok's API to automatically publish workout videos. Only the authenticated account owner's data is accessed. We do not share, sell, or distribute any data to third parties.</p>
-<p>For privacy inquiries, contact: <a href="mailto:contact@proliftingclub.com">contact@proliftingclub.com</a></p>
-
+    <footer>
+        <p>&copy; 2026 ProLiftingClub. All rights reserved.</p>
+        <p><a href="/proliftingclub/terms-of-service.html">Terms of Service</a> • <a href="/proliftingclub/privacy-policy.html">Privacy Policy</a> • <a href="mailto:contact@proliftingclub.com">contact@proliftingclub.com</a></p>
+    </footer>
 </body>
 </html>
